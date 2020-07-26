@@ -1,7 +1,7 @@
 <template>
   <div class="bg-dark h-screen">
     <div class="flex h-maincontentheight">
-      <!-- SIDENAV -->
+      <!-- COMPONENT: SIDENAV -->
       <div class="w-56 grid grid-rows-nav">
         <!-- logo -->
         <div class="p-6">
