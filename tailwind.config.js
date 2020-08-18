@@ -18,6 +18,9 @@ module.exports = {
 			},
 			gridTemplateRows: {
 				nav: "repeat(4, min-content) 1fr"
+			},
+			margin: {
+				tiny: "0.05rem"
 			}
 		}
 	},
