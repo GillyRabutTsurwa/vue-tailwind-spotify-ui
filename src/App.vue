@@ -50,7 +50,7 @@
       <!-- MAINCONTENT -->
       <div class="w-full h-full relative overflow-y-scroll">
         <!-- HEADER -->
-        <div class="w-full sticky top-0 px-4 py-6 flex items-center justify-between">
+        <div class="w-full sticky top-0 px-4 py-6 flex items-center justify-between bg-black">
 
           <div class="flex items-center ml-3">
             <button class="btn rounded-full bg-black w-8 h-8 text-white text-3xl mr-3 flex justify-center items-center">
@@ -68,11 +68,11 @@
                 Gilbert Tsurwa
               </p>
             </button>
-            <div v-if="showDropDown" class="absolute bg-gray-100 bg-opacity-25 w-full rounded mt-tiny">
+            <div v-if="showDropDown" class="absolute bg-black w-full rounded mt-tiny">
               <button @click="showDropDown = false" class="btn w-full text-sm py-2 hover:text-white border-b text-light border-light cursor-pointer text-center">
                 Account
               </button>
-              <button @click="showDropDown = false" class="btn w-full text-sm py-2 hover:text-white border-b text-light border-light cursor-pointer text-center">
+              <button @click="showDropDown = false" class="btn w-full text-sm py-2 hover:text-white text-light border-light cursor-pointer text-center">
                 Log Out
               </button>
             </div>
@@ -143,7 +143,7 @@
 
     <!-- FOOTER / PLAYBAR -->
     <div class="w-full h-footer bg-green-300">
-      <p class="text-center font-bold text-xl">Sidenav: Done &check;</p>
+      <p class="text-center font-bold text-xl">MainContent: Done &check;</p>
     </div>
   </div>
 </template>
