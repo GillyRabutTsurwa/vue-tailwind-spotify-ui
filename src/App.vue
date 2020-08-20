@@ -142,8 +142,21 @@
     </div>
 
     <!-- FOOTER / PLAYBAR -->
-    <div class="w-full h-footer bg-green-300">
-      <p class="text-center font-bold text-xl">MainContent: Done &check;</p>
+    <div class="w-full flex justify-between items-center px-3 bg-black bg-opacity-25">
+      <div class="flex items-center">
+        <div>
+          <h1 class="text-sm text-white trackig-wide">Summer in the City - Who cares</h1>
+          <h2 class="text-xs text-white opacity-50">Who Cares Who Sang</h2>
+        </div>
+        <Icon name="picture_in_picture" />
+        <Icon name="green-heart" />
+      </div>
+      <div class="flex items-center">
+        <Icon name="volume-up" />
+        <Icon name="important-devices" />
+        <Icon name="playlist_play" />
+      </div>
+
     </div>
   </div>
 </template>
