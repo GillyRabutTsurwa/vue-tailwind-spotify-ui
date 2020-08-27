@@ -2,7 +2,8 @@
   <div class="bg-dark h-screen">
     <div class="flex h-maincontentheight">
       <!-- COMPONENT: SIDENAV -->
-      <div class="w-56 grid grid-rows-nav">
+      <!-- <div class="w-56 grid grid-rows-nav"> -->
+      <div class="w-56 bg-black h-full flex-none">
         <!-- logo -->
         <div class="p-6">
           <img src="./assets/img/Spotify_Logo_RGB_White.png" alt="Logo" class="h-10" />
@@ -16,6 +17,7 @@
           </button>
         </div>
         <!-- Playlist (Title and Buttons) -->
+        <!-- TESTING: with h-auto -->
         <div class="mx-5">
           <h3 class="text-xs text-light tracking-widest uppercase mb-3">
             Playlists
@@ -28,11 +30,18 @@
             <Icon name="favourite" class="mr-3" />
             <p class="text-sm text-white font-semibold">Liked Songs</p>
           </button>
-          <div class="h-px w-full bg-light opacity-50 my-3"></div>
+          <!-- <div class="h-px w-full bg-light opacity-50 my-3"></div> -->
         </div>
         <!-- List of Playlists -->
         <div class="mx-5">
-          <div class="w-full h-16 overflow-y-scroll">
+          <h3 class="text-xs text-light tracking-widest uppercase">
+            Library
+          </h3>
+          <!-- removing h-16 4 now -->
+          <div class="w-full h-16 TESTING overflow-y-scroll">
+            <!-- <h3 class="text-xs text-light tracking-widest uppercase">
+              Library
+            </h3> -->
             <p v-for="(currentAlbum, index) in albums" v-bind:key="index" class="text-light hover:text-white text-sm py-1">
               {{ currentAlbum.name }}
             </p>
@@ -45,7 +54,9 @@
         <!-- Currently Playing Image -->
         <!-- May house it in a div later. -->
         <!-- I'll play with that later. -->
-        <img v-bind:src="backgroundUrl" class="block object-cover pt-4" />
+        <div class="relative pt-4 w-full h-auto bg-blue-400">
+          <!-- <img v-bind:src="backgroundUrl" class="w-full h-full pt-4" /> -->
+        </div>
       </div>
       <!-- MAINCONTENT -->
       <div class="w-full h-full relative overflow-y-scroll">
@@ -142,19 +153,31 @@
     </div>
 
     <!-- FOOTER / PLAYBAR -->
-    <div class="w-full flex justify-between items-center px-3 bg-black bg-opacity-25">
+    <div class="w-full h-footer flex justify-between items-center px-3 bg-black bg-opacity-25">
       <div class="flex items-center">
         <div>
-          <h1 class="text-sm text-white trackig-wide">Summer in the City - Who cares</h1>
+          <h1 class="text-sm text-white tracking-wide">Summer in the City - Who cares</h1>
           <h2 class="text-xs text-white opacity-50">Who Cares Who Sang</h2>
         </div>
-        <Icon name="picture_in_picture" />
-        <Icon name="green-heart" />
+        <div class="ml-3 flex">
+          <Icon name="green-heart" class="mr-3" />
+          <Icon name="picture_in_picture" />
+        </div>
+      </div>
+      <!-- Music Controller -->
+      <div class="w-musicControls">
+        <!-- Bar with timestamps -->
+        <div class="w-full flex items-center">
+          <span class="text-light font-thin text-xs">0:00</span>
+          <div class=" w-full h-1 rounded-full mx-3 bg-light"></div>
+          <span class="text-light font-thin text-xs">7:14</span>
+        </div>
       </div>
       <div class="flex items-center">
-        <Icon name="volume-up" />
-        <Icon name="important-devices" />
         <Icon name="playlist_play" />
+        <Icon name="important-devices" class="mx-3" />
+        <Icon name="volume-up" />
+        <div class="w-20 h-1 rounded-full ml-3 bg-light bg-opacity-25 hover:bg-vert transition-all duration-150 ease-in cursor-pointer"></div>
       </div>
 
     </div>
@@ -189,7 +212,6 @@ export default {
         { name: "drive" },
         { name: "zhu" },
         { name: "indie" },
-        { name: "mellow" },
         { name: "vapourwave" }
       ],
       showDropDown: false,
@@ -237,6 +259,7 @@ export default {
 </script>
 
 <style>
+@import url(./App.css);
 button {
   transition: all 0.3s ease-in;
 }

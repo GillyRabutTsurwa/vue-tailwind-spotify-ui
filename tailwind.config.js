@@ -9,7 +9,8 @@ module.exports = {
 				darkest: "#191414"
 			},
 			width: {
-				mainImage: "10rem"
+				mainImage: "10rem",
+				musicControls: "30rem"
 			},
 			height: {
 				maincontentheight: "88vh",
@@ -17,11 +18,15 @@ module.exports = {
 				mainImage: "10rem"
 			},
 			gridTemplateRows: {
-				nav: "repeat(4, min-content) 1fr"
+				nav: "repeat(5, 1fr)"
 			},
 			margin: {
 				tiny: "0.05rem"
 			}
+			// //NEW:
+			// screens: {
+			// 	fullWithBar: { max: "750px" }
+			// }
 		}
 	},
 	variants: {},
