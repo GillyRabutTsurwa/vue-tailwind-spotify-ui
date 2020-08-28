@@ -15,10 +15,11 @@ module.exports = {
 			height: {
 				maincontentheight: "88vh",
 				footer: "12vh",
-				mainImage: "10rem"
+				mainImage: "10rem",
+				testHeight: "35%"
 			},
 			gridTemplateRows: {
-				nav: "repeat(5, 1fr)"
+				nav: "repeat(5, min-content) 1fr"
 			},
 			margin: {
 				tiny: "0.05rem"

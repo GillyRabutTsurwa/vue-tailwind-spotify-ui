@@ -34,11 +34,11 @@
         </div>
         <!-- List of Playlists -->
         <div class="mx-5">
-          <h3 class="text-xs text-light tracking-widest uppercase">
+          <h3 class="text-xs text-light tracking-widest uppercase mt-4">
             Library
           </h3>
           <!-- removing h-16 4 now -->
-          <div class="w-full h-16 TESTING overflow-y-scroll">
+          <div class="w-full h-10 TESTING overflow-y-scroll">
             <!-- <h3 class="text-xs text-light tracking-widest uppercase">
               Library
             </h3> -->
@@ -54,8 +54,8 @@
         <!-- Currently Playing Image -->
         <!-- May house it in a div later. -->
         <!-- I'll play with that later. -->
-        <div class="relative pt-4 w-full h-auto bg-blue-400">
-          <!-- <img v-bind:src="backgroundUrl" class="w-full h-full pt-4" /> -->
+        <div class="relative w-full h-testHeight bg-blue-400">
+          <img v-bind:src="backgroundUrl" class="w-full h-full" />
         </div>
       </div>
       <!-- MAINCONTENT -->
@@ -97,7 +97,7 @@
             <h2 class="pr-8 text-xs text-white text-opacity-50 uppercase tracking-wider hover:underline">See All</h2>
           </div>
           <div class="w-full flex flex-wrap">
-            <div v-for="(currentRecent, index) in recents" v-bind:key="index" class="p-2 w-48 mr-4">
+            <div v-for="(currentRecent, index) in recents" v-bind:key="index" class="p-2 w-48 mr-2">
               <div class="bg-light bg-opacity-25 w-full h-auto p-5 rounded-lg shadow-md">
                 <img v-bind:src="currentRecent.src" class="w-full h-auto shadow mb-2" alt="">
                 <h1 class="text-sm font-semibold text-white tracking wide">{{currentRecent.title}}</h1>
